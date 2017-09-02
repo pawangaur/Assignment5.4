@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Head of the Root -->
+<head> <!-- child sub root of the html tag as head tag  -->
+	<meta charset="UTF-8">
+	<title>JavaScript Objects</title>
+</head>
+<body>
+<!-- it is a body tag-->
+	<script>
+		 var employeesalary=function(emp_name,designation,salary)
+         {
+         	 this.emp_name=emp_name;
+             this.designation=designation;
+             this.salary=salary;
+             
+             this.printdetails=function()
+             {
+             	console.log("The emp_name is " +this.emp_name+ " and his designation " +this.designation+ " and his salary is " +this.salary);
+             }
+                this.changesalary=function(newsalary)
+                {
+                       this.salary=newsalary;
+                       
+
+                };
+
+         };
+		var e1=new employeesalary("Mohan","SD","50000")
+               e1.printdetails();
+                e1.changesalary(100000);
+                e1.printdetails(); 
+
+	</script>
+</body>
+</html>
